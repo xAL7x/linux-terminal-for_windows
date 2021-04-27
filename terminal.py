@@ -130,11 +130,7 @@ while True:
     def sublime():
         if command=="sublime_text3" or command=="sublime":
             subprocess.call("Sublime Text 3\sublime_text.exe")
-    def open_git_bash():
-        if command=="open git bash" or command=="open git Bash" or command=="git bash" or command=="git Bash":
-            subprocess.call("Git\git-bash.exe")
     #import def
-    open_git_bash()
     sublime()
     nmap()
     mv()
@@ -162,7 +158,6 @@ while True:
             command=input(f"""
 \033[0;34m┌──(\033[0;31m{username}💀linux\033[0;34m)-[\033[0;40m~\033[0;34m]
 └─\033[0;31m# \033[0;40m""")
-            open_git_bash()
             sublime()
             nmap()
             mv()
