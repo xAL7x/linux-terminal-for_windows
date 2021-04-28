@@ -8,16 +8,16 @@
 2- ارجو قراءة الاوامر قبل التطبيق
 
 # mkdir
-هو امر لانشاء الملفات
+هو امر لإنشاء المجلدات
 ```
-mkdir <filename>
+mkdir <foldername>
 __
 mkdir hello
 ```
 # rm
-هو امر لحذف الملفات
+هو امر لحذف المجلدات
 ```
-rm <filename>
+rm <foldername>
 __
 rm hello
 
