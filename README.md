@@ -33,11 +33,20 @@ touch hello.txt
 مثل الامر touch
 _________________
 # mv
-لاعادة تسمية المجلدات
+لاعادة تسمية المجلدات والملفات
+<h3>Folder</h3>
+
 ```
 mv <oldname> <newname>
 __
 mv hello1 hello2
+```
+<h3>File</h3>
+
+```
+mv <path/old/name> <newname>
+__
+mv C:/Users/terminal/Desktop/terminal.py terminal1.py
 ```
 # pwd
 لمعرفة المسار الذي انت به
