@@ -1,29 +1,41 @@
 import os
 import time
 import subprocess
+from getpass import getpass
 try:
     import ascii_magic
-    import pyfiglet
     
 except:
     os.system("pip install ascii_magic")
-    os.system("pip install pyfiglet")
 os.system("cls")
 time.sleep(2)
-qwer=("kali1.png")
+qwer=("kali.png")
 out=ascii_magic.from_image_file(qwer,columns=150,char=']')
 ascii_magic.to_terminal(out)
 time.sleep(2)
 os.system("cls")
-pyfiglet.print_figlet("Linux")
-print("============> Created by alhassanAlharb7 <============")
+print("""
+ _
+| |   (_)_ __  _   ___  __
+| |   | | '_ \| | | \ \/ /
+| |___| | | | | |_| |>  <
+|_____|_|_| |_|\__,_/_/\_\   v2""")
+print("")
+print("""
+                     \033[0;38 ───────────────────────────
+                    \033[0;38m|                           |
+                    \033[0;38m|\033[0;31m         </AL7>            \033[0;38m|
+                    \033[0;38m| \033[0;34mTwitter:@alhassanAlharb7  \033[0;38m|
+                    \033[0;38m|\033[0;31m        Terminal           \033[0;38m|
+                    \033[0;38m|___________________________|""")
 username=input("User name: ")
+password=getpass("Password: ")
 
 while True:
-    print("_"*60)
+    print("""""""")
     command=input(f"""
-\033[0;32m┌──(\033[0;34m{username}@linux\033[0;32m)-[\033[0;40m~\033[0;32m]
-└─\033[0;34m$ \033[0;40m""")
+\033[0;34m┌──(\033[0;31m{username}@linux\033[0;34m)-[\033[0;40m~\033[0;34m]
+└─\033[0;31m# \033[0;40m""")
     def ls():
         if command=="ls":
             os.system("dir")
@@ -53,9 +65,13 @@ while True:
     def pwd():
         if command=="pwd":
             os.system("cd")
+    def cat():
+        if "cat " in command:
+            a=command.replace('cat ','more ')
+            os.system(a)
     def exit1():
         if command=="exit":
-            exit()
+            exit("Thanks for use terminal")
     def python():
         if command=="python":
             os.system("python")
@@ -80,7 +96,6 @@ while True:
             os.system("cls")
             q=command.replace("nano",'')
             file=open(q,"w")
-            file.write('')
             while True:
                 a=input("")
                 
@@ -120,17 +135,17 @@ while True:
                 except:
                     return None
 
-            for port in range(78, 84):
+            for port in range(70, 101):
                 value = porttry(ip, port)
                 if value == None:
                     print("Port not opened %d" % port)
                 else:
                     print("Port opened %d" % port)
-                    break
     def sublime():
         if command=="sublime_text3" or command=="sublime":
             subprocess.call("Sublime Text 3\sublime_text.exe")
     #import def
+    cat()
     sublime()
     nmap()
     mv()
@@ -153,11 +168,13 @@ while True:
 #_________________________________________________
 #______________________________________
     if command=="sudo":
-        while True:
+        password_sudo=getpass("Password: ")
+        while password==password_sudo:
             print("_"*60)   
             command=input(f"""
 \033[0;34m┌──(\033[0;31m{username}💀linux\033[0;34m)-[\033[0;40m~\033[0;34m]
 └─\033[0;31m# \033[0;40m""")
+            cat()
             sublime()
             nmap()
             mv()
@@ -173,7 +190,6 @@ while True:
             pwd()
             rm()
             copy()
-            exit1()
             clear()
             mkdir()        
             ls()
