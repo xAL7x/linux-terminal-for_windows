@@ -66,6 +66,8 @@ cp c:\user\dell\desktop\terminal.py e:\python
 لمعرف الملفات والمجلدات الموجودة في المسار
 # clear 
 لحذف المحتويات على شاشة terminal
+# cat
+لقراءة الملفات
 _________________
 # ifconfig
 لمعرفة معلومات عن الشبكة
