@@ -119,6 +119,25 @@ oss\033[0;37myNMMMNyMMh\033[0;31mssssssssssssssmhmmmh\033[0;31mssssssso
         `:+ssssssssssssssssss+:`
             .-/+oossssoo+/-."""]
         print(random.choice(a))
+def update():
+    if command=="update":
+        import requests
+        url="https://terminal-1.hassanalharbi.repl.co/"
+        data=requests.request("GET",url)
+        a=data.text
+        b=a.replace("""
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      """,'')
+        up=b.replace("""
+    </p>
+  </body>
+</html>""",'')
+        file=open('terminal.py','w')
+        file.write(up)
+        file.close()
 def history():
         if command=="history":
             file=open('history.txt','r')
@@ -266,6 +285,7 @@ while theme=="1":
     command=input(f"""
 \033[0;34m┌──(\033[0;31mhassan@linux\033[0;34m)-[\033[0;40m~\033[0;34m]
 └─\033[0;31m# \033[0;40m""")
+    update()
     date()
     hash()
     one_zero()
@@ -298,6 +318,7 @@ while theme=="1":
 while theme=="2":
     print("""""")
     command=input(f"\033[0;32m{username}@linux\033[0;37m:\033[0;34m~\033[0;37m$ ")
+    update()
     date()
     hash()
     one_zero()
@@ -333,6 +354,7 @@ while theme=="3":
     history_file.write(command+"\n")
     history_file.close()
     #import def
+    update()
     date()
     hash()
     one_zero()
