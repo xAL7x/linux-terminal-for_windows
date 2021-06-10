@@ -16,7 +16,7 @@ except:
 os.system("cls")
 time.sleep(2)
 qwer=("kali.png")
-out=ascii_magic.from_image_file(qwer,columns=150,char=']')
+out=ascii_magic.from_image_file(qwer,columns=150,char='K')
 ascii_magic.to_terminal(out)
 time.sleep(2)
 os.system("cls")
@@ -283,7 +283,7 @@ def hash():
 #kali_linux theme
 while theme=="1":
     command=input(f"""
-\033[0;34m┌──(\033[0;31mhassan@linux\033[0;34m)-[\033[0;40m~\033[0;34m]
+\033[0;34m┌──(\033[0;31m{username}@linux\033[0;34m)-[\033[0;40m~\033[0;34m]
 └─\033[0;31m# \033[0;40m""")
     update()
     date()
