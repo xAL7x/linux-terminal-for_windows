@@ -15,7 +15,7 @@ except:
     os.system("pip install ascii_magic")
 os.system("cls")
 time.sleep(2)
-qwer=("kali.png")
+qwer=("kali1.png")
 out=ascii_magic.from_image_file(qwer,columns=150,char='K')
 ascii_magic.to_terminal(out)
 time.sleep(2)
